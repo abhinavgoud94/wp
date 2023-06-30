@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Application Form</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    
+    .form-row {
+      display: flex;
+      align-items: center;
+    }
+    
+    .form-row label {
+      flex: 0 0 150px;
+    }
+    
+    .form-row input[type="checkbox"],
+    .form-row input[type="radio"] {
+      margin-right: 5px;
+    }
+    
+    .form-row input[type="radio"]:last-child {
+      margin-right: 0;
+    }
+    
+    .form-row select {
+      flex: 1;
+      max-width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Application Form</h1>
+  <form>
+    <div class="form-row">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-row">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-row">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    
+    <div class="form-row">
+      <label>Skills:</label>
+      <input type="checkbox" id="html" name="skills" value="HTML">
+      <label for="html">HTML</label>
+      <input type="checkbox" id="css" name="skills" value="CSS">
+      <label for="css">CSS</label>
+      <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    </div>
+    
+    <div class="form-row">
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" required>
+      <label for="other">Other</label>
+    </div>
+    
+    <div class="form-row">
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="India">India</option>
+        <option value="Canada">Canada</option>
+        <option value="UK">UK</option>
+        <option value="Australia">Australia</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    
+    <div class="form-row">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
